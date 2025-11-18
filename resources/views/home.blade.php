@@ -46,9 +46,9 @@
     </style>
 </head>
 
-<body class="bg-[#fffafc] text-[#2b2b2b]">
-    <x-header></x-header>
+<x-header></x-header>
 
+<body class="bg-[#fffafc] text-[#2b2b2b]">
     <main class="pt-0">
         <!-- Hero -->
         <section class="relative overflow-hidden">
@@ -139,28 +139,28 @@
 
     <x-footer></x-footer>
 
-    <script>
-        // Reveal on scroll
-        (function() {
-            const els = document.querySelectorAll('.reveal');
-            if (!('IntersectionObserver' in window) || els.length === 0) {
-                els.forEach(el => el.classList.add('show'));
-                return;
-            }
-            const io = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('show');
-                        io.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.15
-            });
-            els.forEach(el => io.observe(el));
-        })();
-    </script>
-
 </body>
+
+<script>
+    // Reveal on scroll
+    (function() {
+        const els = document.querySelectorAll('.reveal');
+        if (!('IntersectionObserver' in window) || els.length === 0) {
+            els.forEach(el => el.classList.add('show'));
+            return;
+        }
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+        els.forEach(el => io.observe(el));
+    })();
+</script>
 
 </html>
