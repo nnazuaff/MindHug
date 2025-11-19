@@ -81,13 +81,13 @@
                         </a>
                     </li>
                 </ul>
-                <a href="/curhat"
+                <a href="/login"
                     class="hidden md:inline-flex items-center gap-2 rounded-lg bg-[#a47551] text-white px-4 py-2 shadow-sm hover:bg-[#8f6243] active:scale-[0.98] transition transform-gpu focus:outline-none focus:ring-2 focus:ring-white/50">
                     <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M21 15a4 4 0 0 1-4 4H8l-4 3v-3a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h13a4 4 0 0 1 4 4v8Z" />
                     </svg>
-                    <span>Mulai Curhat</span>
+                    <span>Login</span>
                 </a>
             </div>
         </nav>
