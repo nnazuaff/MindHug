@@ -1,8 +1,9 @@
-<header class="sticky top-0 z-50 bg-[#c19a6b]/95 backdrop-blur border-b-4 border-[#836c5a] shadow">
+<header class="sticky top-0 z-50 bg-[#c19a6b]/95 backdrop-blur border-b border-[#836c5a]/70 shadow">
     <div class="max-w-[1100px] mx-auto px-4 py-3 flex items-center justify-between">
-        <a href="/" class="flex items-center text-white text-2xl baloo font-semibold select-none">
-            <img src="logo/favicon.png" alt="MindHug logo" class="h-10 mr-3 rounded-xl" />
-            MindHug
+        <a href="/"
+            class="flex items-center gap-2 text-white/95 text-xl md:text-2xl font-semibold tracking-tight select-none hover:text-white transition-colors">
+            <img src="logo/favicon.png" alt="MindHug logo" class="h-9 md:h-10 rounded-md" />
+            <span class="font-sans">MindHug</span>
         </a>
 
         <button id="navToggle" aria-label="Toggle navigation" aria-expanded="false"
@@ -25,11 +26,11 @@
         </button>
 
         <nav id="navMenu" class="hidden md:block">
-            <div class="md:flex md:items-center md:gap-6 text-white">
-                <ul class="md:flex md:items-center md:gap-2">
+            <div class="md:flex md:items-center md:gap-6 text-white/95">
+                <ul class="md:flex md:items-center md:gap-2 text-[15px]">
                     <li class="py-1 md:py-0">
                         <a href="/"
-                            class="group inline-flex items-center gap-2 px-3 py-2 rounded-md transition-all duration-200 ease-out hover:text-white hover:bg-white/5 md:border-b-2 md:border-transparent {{ request()->is('/') ? 'text-white font-semibold md:border-white' : 'text-white/90' }}"
+                            class="group inline-flex items-center gap-2 px-3 py-2 rounded-md transition-all duration-200 ease-out hover:text-white hover:bg-white/5 md:border-b-2 md:border-transparent {{ request()->is('/') ? 'text-white font-semibold' : 'text-white/90' }}"
                             @if (request()->is('/')) aria-current="page" @endif>
                             <svg class="h-5 w-5 opacity-90 group-hover:opacity-100" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
@@ -41,7 +42,7 @@
                     </li>
                     <li class="py-1 md:py-0">
                         <a href="/about"
-                            class="group inline-flex items-center gap-2 px-3 py-2 rounded-md transition-all duration-200 ease-out hover:text-white hover:bg-white/5 md:border-b-2 md:border-transparent {{ request()->is('about') ? 'text-white font-semibold md:border-white' : 'text-white/90' }}"
+                            class="group inline-flex items-center gap-2 px-3 py-2 rounded-md transition-all duration-200 ease-out hover:text-white hover:bg-white/5 md:border-b-2 md:border-transparent {{ request()->is('about') ? 'text-white font-semibold' : 'text-white/90' }}"
                             @if (request()->is('about')) aria-current="page" @endif>
                             <svg class="h-5 w-5 opacity-90 group-hover:opacity-100" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
@@ -55,7 +56,7 @@
                     </li>
                     <li class="py-1 md:py-0">
                         <a href="/curhat"
-                            class="group inline-flex items-center gap-2 px-3 py-2 rounded-md transition-all duration-200 ease-out hover:text-white hover:bg-white/5 md:border-b-2 md:border-transparent {{ request()->is('curhat') ? 'text-white font-semibold md:border-white' : 'text-white/90' }}"
+                            class="group inline-flex items-center gap-2 px-3 py-2 rounded-md transition-all duration-200 ease-out hover:text-white hover:bg-white/5 md:border-b-2 md:border-transparent {{ request()->is('curhat') ? 'text-white font-semibold' : 'text-white/90' }}"
                             @if (request()->is('curhat')) aria-current="page" @endif>
                             <svg class="h-5 w-5 opacity-90 group-hover:opacity-100" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
@@ -68,7 +69,7 @@
                     </li>
                     <li class="py-1 md:py-0">
                         <a href="/shop"
-                            class="group inline-flex items-center gap-2 px-3 py-2 rounded-md transition-all duration-200 ease-out hover:text-white hover:bg-white/5 md:border-b-2 md:border-transparent {{ request()->is('shop') ? 'text-white font-semibold md:border-white' : 'text-white/90' }}"
+                            class="group inline-flex items-center gap-2 px-3 py-2 rounded-md transition-all duration-200 ease-out hover:text-white hover:bg-white/5 md:border-b-2 md:border-transparent {{ request()->is('shop') ? 'text-white font-semibold' : 'text-white/90' }}"
                             @if (request()->is('shop')) aria-current="page" @endif>
                             <svg class="h-5 w-5 opacity-90 group-hover:opacity-100" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
@@ -92,6 +93,7 @@
         </nav>
     </div>
 
+    <!-- Mobile Navbar (drawer) -->
     <div id="navMenuMobile"
         class="md:hidden max-h-0 opacity-0 -translate-y-1 overflow-hidden transition-all duration-300 ease-out border-t border-[#836c5a]/40 bg-[#c19a6b]">
         <nav class="max-w-[1100px] mx-auto px-4 py-3">
@@ -153,7 +155,9 @@
             </div>
         </nav>
     </div>
+    <!-- /Mobile Navbar (drawer) -->
 
+    <!-- Mobile Navbar Toggle Script -->
     <script>
         (function() {
             var btn = document.getElementById('navToggle');
