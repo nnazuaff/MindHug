@@ -69,7 +69,7 @@
             </div>
         </section>
 
-        <!-- Gentle CTA -->
+        <!-- -->
         <section class="relative">
             <div class="absolute inset-0 bg-linear-to-t from-[#f5ebe1] to-transparent"></div>
             <div class="relative max-w-[1100px] mx-auto px-4 py-12 md:py-16">

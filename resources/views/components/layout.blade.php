@@ -54,7 +54,6 @@
 <x-footer></x-footer>
 
 <script>
-    // Reveal on scroll
     (function() {
         const els = document.querySelectorAll('.reveal');
         if (!('IntersectionObserver' in window) || els.length === 0) {

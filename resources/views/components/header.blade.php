@@ -93,7 +93,7 @@
         </nav>
     </div>
 
-    <!-- Mobile Navbar (drawer) -->
+    <!-- Mobile Navbar -->
     <div id="navMenuMobile"
         class="md:hidden max-h-0 opacity-0 -translate-y-1 overflow-hidden transition-all duration-300 ease-out border-t border-[#836c5a]/40 bg-[#c19a6b]">
         <nav class="max-w-[1100px] mx-auto px-4 py-3">
@@ -155,7 +155,6 @@
             </div>
         </nav>
     </div>
-    <!-- /Mobile Navbar (drawer) -->
 
     <!-- Mobile Navbar Toggle Script -->
     <script>
