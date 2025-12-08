@@ -1,4 +1,4 @@
-<x-layout title="About Us - MindHug">
+<x-layout title="About">
     <main class="pt-0">
         <!-- Hero -->
         <section class="relative overflow-hidden">

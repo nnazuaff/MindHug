@@ -72,6 +72,20 @@
         });
         els.forEach(el => io.observe(el));
     })();
+
+    
 </script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            softBrown: '#d7c6b8',
+            darkBrown: '#8b6f5c'
+          }
+        }
+      }
+    }
+  </script>
 
 </html>
