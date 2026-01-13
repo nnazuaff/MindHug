@@ -14,3 +14,6 @@ Route::get('shop', function () {
 Route::get('curhat', function () {
     return view('curhat', ['title' => 'Shop']);
 });
+Route::get('login', function () {
+    return view('login', ['title' => 'Login']);
+});
