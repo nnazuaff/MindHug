@@ -81,14 +81,38 @@
                         </a>
                     </li>
                 </ul>
-                <a href="/login"
-                    class="hidden md:inline-flex items-center gap-2 rounded-lg bg-[#a47551] text-white px-4 py-2 shadow-sm hover:bg-[#8f6243] active:scale-[0.98] transition transform-gpu focus:outline-none focus:ring-2 focus:ring-white/50">
-                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M21 15a4 4 0 0 1-4 4H8l-4 3v-3a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h13a4 4 0 0 1 4 4v8Z" />
-                    </svg>
-                    <span>Login</span>
-                </a>
+                @if (session('auth_user'))
+                    <div class="hidden md:flex items-center gap-3">
+                        <div class="text-right">
+                            <div class="text-sm font-semibold text-white">{{ session('auth_user.username') }}</div>
+                            <div class="text-[11px] text-white/80">Logged in (demo)</div>
+                        </div>
+                        <form method="POST" action="/logout">
+                            @csrf
+                            <button type="submit"
+                                class="inline-flex items-center gap-2 rounded-lg bg-white/10 text-white px-4 py-2 border border-white/20 hover:bg-white/15 active:scale-[0.98] transition transform-gpu focus:outline-none focus:ring-2 focus:ring-white/50">
+                                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    aria-hidden="true">
+                                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                                    <path d="M16 17l5-5-5-5" />
+                                    <path d="M21 12H9" />
+                                </svg>
+                                <span>Logout</span>
+                            </button>
+                        </form>
+                    </div>
+                @else
+                    <a href="/login"
+                        class="hidden md:inline-flex items-center gap-2 rounded-lg bg-[#a47551] text-white px-4 py-2 shadow-sm hover:bg-[#8f6243] active:scale-[0.98] transition transform-gpu focus:outline-none focus:ring-2 focus:ring-white/50">
+                        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path
+                                d="M21 15a4 4 0 0 1-4 4H8l-4 3v-3a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h13a4 4 0 0 1 4 4v8Z" />
+                        </svg>
+                        <span>Login</span>
+                    </a>
+                @endif
             </div>
         </nav>
     </div>
@@ -144,8 +168,38 @@
                 </li>
             </ul>
             <div class="pt-3">
+                @if (session('auth_user'))
+                    <form method="POST" action="/logout" class="space-y-2">
+                        @csrf
+                        <div class="rounded-lg bg-white/10 border border-white/15 px-4 py-3 text-white">
+                            <div class="text-sm font-semibold">{{ session('auth_user.username') }}</div>
+                            <div class="text-[11px] text-white/80">Logged in (demo)</div>
+                        </div>
+                        <button type="submit"
+                            class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-white/10 text-white px-4 py-2 border border-white/20 hover:bg-white/15 active:scale-[0.98] transition transform-gpu focus:outline-none focus:ring-2 focus:ring-white/50">
+                            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                                <path d="M16 17l5-5-5-5" />
+                                <path d="M21 12H9" />
+                            </svg>
+                            <span>Logout</span>
+                        </button>
+                    </form>
+                @else
+                    <a href="/login"
+                        class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#a47551] text-white px-4 py-2 shadow-sm hover:bg-[#8f6243] active:scale-[0.98] transition transform-gpu focus:outline-none focus:ring-2 focus:ring-white/50">
+                        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path
+                                d="M21 15a4 4 0 0 1-4 4H8l-4 3v-3a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h13a4 4 0 0 1 4 4v8Z" />
+                        </svg>
+                        <span>Login</span>
+                    </a>
+                @endif
+
                 <a href="/curhat"
-                    class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#a47551] text-white px-4 py-2 shadow-sm hover:bg-[#8f6243] active:scale-[0.98] transition transform-gpu focus:outline-none focus:ring-2 focus:ring-white/50">
+                    class="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#836c5a]/30 text-white px-4 py-2 hover:bg-[#836c5a]/40 active:scale-[0.98] transition transform-gpu focus:outline-none focus:ring-2 focus:ring-white/50">
                     <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M21 15a4 4 0 0 1-4 4H8l-4 3v-3a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h13a4 4 0 0 1 4 4v8Z" />

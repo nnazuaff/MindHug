@@ -46,46 +46,61 @@
     </style>
 </head>
 
-<x-header :title="$title"></x-header>
+<body class="bg-[#fffafc] text-[#2b2b2b]" style="padding-bottom: var(--footer-h, 220px);">
+    <x-header :title="$title"></x-header>
 
-<body class="bg-[#fffafc] text-[#2b2b2b]">
     {{ $slot }}
-</body>
-<x-footer></x-footer>
 
-<script>
-    (function() {
-        const els = document.querySelectorAll('.reveal');
-        if (!('IntersectionObserver' in window) || els.length === 0) {
-            els.forEach(el => el.classList.add('show'));
-            return;
-        }
-        const io = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                    io.unobserve(entry.target);
-                }
+    <x-footer></x-footer>
+
+    <script>
+        (function() {
+            const els = document.querySelectorAll('.reveal');
+            if (!('IntersectionObserver' in window) || els.length === 0) {
+                els.forEach(el => el.classList.add('show'));
+                return;
+            }
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15
             });
-        }, {
-            threshold: 0.15
-        });
-        els.forEach(el => io.observe(el));
-    })();
+            els.forEach(el => io.observe(el));
+        })();
+    </script>
 
-    
-</script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            softBrown: '#d7c6b8',
-            darkBrown: '#8b6f5c'
-          }
+    <script>
+        (function() {
+            function applyFooterSpace() {
+                var footer = document.getElementById('siteFooter');
+                if (!footer) return;
+                var h = Math.ceil(footer.getBoundingClientRect().height || footer.offsetHeight || 0);
+                if (h > 0) {
+                    document.documentElement.style.setProperty('--footer-h', h + 'px');
+                }
+            }
+            applyFooterSpace();
+            window.addEventListener('resize', applyFooterSpace);
+        })();
+    </script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        softBrown: '#d7c6b8',
+                        darkBrown: '#8b6f5c'
+                    }
+                }
+            }
         }
-      }
-    }
-  </script>
+    </script>
+</body>
 
 </html>

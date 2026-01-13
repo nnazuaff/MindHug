@@ -1,4 +1,5 @@
-<footer class="relative bg-[#f4eadf] text-[#2b2b2b] border-t border-[#c19a6b]/50">
+<footer id="siteFooter"
+    class="fixed bottom-0 left-0 right-0 z-40 bg-[#f4eadf] text-[#2b2b2b] border-t border-[#c19a6b]/50">
     <div class="max-w-[1100px] mx-auto px-4 py-12">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             <!-- Brand -->
