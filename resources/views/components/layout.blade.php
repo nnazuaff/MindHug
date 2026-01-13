@@ -46,10 +46,12 @@
     </style>
 </head>
 
-<body class="bg-[#fffafc] text-[#2b2b2b]" style="padding-bottom: var(--footer-h, 220px);">
+<body class="bg-[#fffafc] text-[#2b2b2b] min-h-screen flex flex-col">
     <x-header :title="$title"></x-header>
 
-    {{ $slot }}
+    <div class="flex-1">
+        {{ $slot }}
+    </div>
 
     <x-footer></x-footer>
 
@@ -71,21 +73,6 @@
                 threshold: 0.15
             });
             els.forEach(el => io.observe(el));
-        })();
-    </script>
-
-    <script>
-        (function() {
-            function applyFooterSpace() {
-                var footer = document.getElementById('siteFooter');
-                if (!footer) return;
-                var h = Math.ceil(footer.getBoundingClientRect().height || footer.offsetHeight || 0);
-                if (h > 0) {
-                    document.documentElement.style.setProperty('--footer-h', h + 'px');
-                }
-            }
-            applyFooterSpace();
-            window.addEventListener('resize', applyFooterSpace);
         })();
     </script>
 
