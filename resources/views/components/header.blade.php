@@ -1,4 +1,4 @@
-<header class="sticky top-0 z-50 bg-[#c19a6b]/95 backdrop-blur border-b border-[#836c5a]/70 shadow">
+<header class="sticky top-0 z-50 bg-[#aa875c]/95 backdrop-blur border-b border-[#836c5a]/70 shadow">
     <div class="max-w-[1100px] mx-auto px-4 py-3 flex items-center justify-between">
         <a href="/"
             class="flex items-center gap-2 text-white/95 text-xl md:text-2xl font-semibold tracking-tight select-none hover:text-white transition-colors">
@@ -104,7 +104,7 @@
                     </div>
                 @else
                     <a href="/login"
-                        class="hidden md:inline-flex items-center gap-2 rounded-lg bg-[#a47551] text-white px-4 py-2 shadow-sm hover:bg-[#8f6243] active:scale-[0.98] transition transform-gpu focus:outline-none focus:ring-2 focus:ring-white/50">
+                        class="hidden md:inline-flex items-center gap-2 rounded-lg bg-[#906645b5] text-white px-4 py-2 shadow-sm hover:bg-[#a47353] active:scale-[0.98] transition transform-gpu focus:outline-none focus:ring-2 focus:ring-white/50">
                         <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path
