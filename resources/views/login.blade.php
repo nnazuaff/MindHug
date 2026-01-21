@@ -7,7 +7,7 @@
                     <div class="reveal">
                         <span
                             class="inline-block text-xs tracking-widest uppercase text-[#836c5a]/80 bg-[#c19a6b]/10 px-3 py-1 rounded-full mb-4">Prototype</span>
-                        <h1 class="text-2xl md:text-4xl font-semibold leading-tight text-[#1f1f1f]">Login ke Warung</h1>
+                        <h1 class="text-2xl md:text-4xl font-semibold leading-tight text-[#1f1f1f]">Login ke Mindhug</h1>
                         <p class="mt-3 text-[#4b4b4b]">Belum pakai database. Login ini hanya untuk demo alur.</p>
 
                         <div class="mt-6 rounded-2xl border border-[#c19a6b]/25 bg-white/80 backdrop-blur p-5">
