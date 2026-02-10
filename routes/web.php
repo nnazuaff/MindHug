@@ -78,7 +78,7 @@ Route::get('login', function () {
         'title' => 'Login',
         // Prototype credentials (tanpa DB)
         'demoUsername' => 'mindhug',
-        'demoPassword' => 'peluk123',
+        'demoPassword' => 'admin123',
     ]);
 });
 

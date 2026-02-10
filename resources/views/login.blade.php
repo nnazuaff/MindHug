@@ -8,7 +8,7 @@
                         <span
                             class="inline-block text-xs tracking-widest uppercase text-[#836c5a]/80 bg-[#c19a6b]/10 px-3 py-1 rounded-full mb-4">Prototype</span>
                         <h1 class="text-2xl md:text-4xl font-semibold leading-tight text-[#1f1f1f]">Login ke Mindhug</h1>
-                        <p class="mt-3 text-[#4b4b4b]">Belum pakai database. Login ini hanya untuk demo alur.</p>
+                        <p class="mt-3 text-[#4b4b4b]">Login ini hanya untuk demo alur</p>
 
                         <div class="mt-6 rounded-2xl border border-[#c19a6b]/25 bg-white/80 backdrop-blur p-5">
                             <p class="text-sm text-[#5b5b5b]">Akun demo:</p>
@@ -20,7 +20,7 @@
                                 </div>
                                 <div class="rounded-xl bg-[#a47551]/10 px-4 py-3 border border-[#a47551]/15">
                                     <div class="text-xs uppercase tracking-widest text-[#6a5a4f]">Password</div>
-                                    <div class="mt-1 font-semibold text-[#2b2b2b]">{{ $demoPassword ?? 'peluk123' }}
+                                    <div class="mt-1 font-semibold text-[#2b2b2b]">{{ $demoPassword ?? 'admin123' }}
                                     </div>
                                 </div>
                             </div>
@@ -65,14 +65,14 @@
                                         for="password">Password</label>
                                     <input id="password" name="password" type="password"
                                         class="mt-2 w-full rounded-xl border border-[#c19a6b]/35 bg-white px-4 py-3 text-[#1f1f1f] placeholder:text-[#8b7a6f] focus:outline-none focus:ring-2 focus:ring-[#a47551]/30"
-                                        placeholder="misal: peluk123" autocomplete="current-password" />
+                                        placeholder="misal: admin123" autocomplete="current-password" />
                                     @error('password')
                                         <p class="mt-2 text-sm text-red-700">{{ $message }}</p>
                                     @enderror
                                 </div>
 
                                 <button type="submit"
-                                    class="w-full inline-flex items-center justify-center rounded-xl bg-[#a47551] text-white px-5 py-3 shadow-sm hover:bg-[#8f6243] active:scale-[0.99] transition focus:outline-none focus:ring-2 focus:ring-[#a47551]/40">
+                                    class="w-full inline-flex items-center justify-center rounded-xl bg-[#a47551] text-white px-5 py-3 shadow-sm hover:bg-[#d69b6d] active:scale-[0.99] transition focus:outline-none focus:ring-2 focus:ring-[#a47551]/40">
                                     Login
                                 </button>
 

@@ -105,11 +105,14 @@
                 @else
                     <a href="/login"
                         class="hidden md:inline-flex items-center gap-2 rounded-lg bg-[#906645b5] text-white px-4 py-2 shadow-sm hover:bg-[#a47353] active:scale-[0.98] transition transform-gpu focus:outline-none focus:ring-2 focus:ring-white/50">
-                        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path
-                                d="M21 15a4 4 0 0 1-4 4H8l-4 3v-3a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h13a4 4 0 0 1 4 4v8Z" />
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="h-5 w-5">
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                            <polyline points="10 17 15 12 10 7" />
+                            <line x1="15" y1="12" x2="3" y2="12" />
                         </svg>
+
                         <span>Login</span>
                     </a>
                 @endif
